@@ -1,0 +1,136 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border-radius: 15px;
+  padding: 30px 40px 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.units {
+  position: relative;
+  top: -10px;
+  font-size: 10px;
+  color: white;
+}
+
+.fa-wind {
+  margin-left: 30px;
+}
+
+.today,
+.low-high {
+  text-align: center;
+  font-size: 8px;
+}
+
+.today {
+  margin-bottom: 5px;
+}
+
+.weather {
+  text-align: center;
+  font-size: 10px;
+  margin: 5px auto;
+}
+
+.plus-info {
+  text-align: center;
+  font-size: 10px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.fa-map-marker-alt {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.icons {
+  text-align: center;
+}
+
+.days {
+  text-align: left;
+}
+
+.temperature {
+  text-align: right;
+}
+
+#search-city {
+  margin: 50px auto 15px;
+  text-align: center;
+}
+
+#change-city {
+  border-radius: 20px;
+  padding: 3px 10px;
+  text-align: center;
+  font-size: 10px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#search-button {
+  border-radius: 20px;
+  border: transparent;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: white;
+  background: linear-gradient(
+    109.6deg,
+    rgb(9, 9, 121) 11.2%,
+    rgb(144, 6, 161) 53.7%,
+    rgb(0, 212, 255) 100.2%
+  );
+  transition: all 200ms ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#search-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#current-button {
+  border-radius: 20px;
+  border: transparent;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: white;
+  background: rgb(144, 6, 161) 53.7%;
+  transition: all 200ms ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#current-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
+

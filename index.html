@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/39a9a1d205.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mari's Weather.app</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <p class="today">Sun, 11:00 am</p>
+          <h1>
+            <i class="fas fa-map-marker-alt"></i>
+            <span id="city">Belo Horizonte</span>
+          </h1>
+          <p class="weather">Mostly sunny</p>
+          <h2>
+            ☀️ <span id="current-temperature">27</span>
+            <span class="units"
+              ><a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a></span
+            >
+          </h2>
+          <p class="low-high">H:28º L:14º</p>
+        </div>
+        <div class="plus-info">
+          <i class="fas fa-umbrella"></i> <span id="humidity">36%</span>
+          <i class="fas fa-wind"></i> <span id="wind">10km/hr</span>
+        </div>
+        <div class="row">
+          <div class="col-5 days">
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+          </div>
+          <div class="col-2 icons">
+            <div><i class="fas fa-cloud-sun"></i></div>
+            <div><i class="fas fa-cloud"></i></div>
+            <div><i class="fas fa-cloud-sun-rain"></i></div>
+            <div><i class="fas fa-sun"></i></div>
+            <div><i class="fas fa-sun"></i></div>
+          </div>
+          <div class="col-5 temperature">
+            <div>28 14</div>
+            <div>24 10</div>
+            <div>26 12</div>
+            <div>25 12</div>
+            <div>23 11</div>
+          </div>
+        </div>
+        <form id="search-city">
+          <input
+            type="text"
+            id="change-city"
+            placeholder="CHANGE CITY"
+            autofocus
+          />
+          <input type="submit" id="search-button" value="SEARCH" />
+          <button id="current-button">CURRENT</button>
+        </form>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
