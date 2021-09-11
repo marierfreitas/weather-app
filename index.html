@@ -27,7 +27,7 @@
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <p class="today">Sun, 11:00 am</p>
+          <p class="today"></p>
           <h1>
             <i class="fas fa-map-marker-alt"></i>
             <span id="city"></span>
@@ -41,11 +41,13 @@
               <a href="#" id="fahrenheit-link">°F</a></span
             >
           </h2>
-          <p class="low-high">H:28º L:14º</p>
+          <p class="high-low">
+            H:<span id="high"></span> L:<span id="low"></span>
+          </p>
         </div>
         <div class="plus-info">
-          <i class="fas fa-tint"></i> <span id="humidity">36%</span>
-          <i class="fas fa-wind"></i> <span id="wind">10km/hr</span>
+          <i class="fas fa-tint"></i> <span id="humidity">%</span>
+          <i class="fas fa-wind"></i> <span id="wind">km/hr</span>
         </div>
         <div class="row">
           <div class="col-5 days">

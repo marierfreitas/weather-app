@@ -34,7 +34,7 @@ h2 {
 }
 
 .today,
-.low-high {
+.high-low {
   text-align: center;
   font-size: 8px;
 }
@@ -92,6 +92,14 @@ h2 {
   color: white;
   text-decoration: none;
   background-color: transparent;
+}
+
+#celsius-link:hover {
+  text-decoration: underline;
+}
+
+#fahrenheit-link:hover {
+  text-decoration: underline;
 }
 
 #search-city {
