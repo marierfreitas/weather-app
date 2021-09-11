@@ -1,5 +1,3 @@
-// Feature #1
-
 function currentDate() {
   let now = new Date();
   let hour = now.getHours();
@@ -26,9 +24,6 @@ function currentDate() {
   return `${day}, ${hour}:${minutes}`;
 }
 
-let today = document.querySelector("p.today");
-today.innerHTML = currentDate();
-
 function searchCity(event) {
   event.preventDefault();
   let apiKey = "7f94287315df4241e13380459d3ec750";
@@ -38,9 +33,6 @@ function searchCity(event) {
   city.innerHTML = changeCity;
   axios.get(url).then(displayWeather);
 }
-
-let searchCityForm = document.querySelector("#search-city");
-searchCityForm.addEventListener("submit", searchCity);
 
 function displayWeather(response) {
   let city = response.data.name;
@@ -84,11 +76,6 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
-getCurrentPosition();
-
-let currentButton = document.querySelector("#current-button");
-currentButton.addEventListener("click", getCurrentPosition);
-
 function displayFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
@@ -101,6 +88,17 @@ function displayCelsius(event) {
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let today = document.querySelector("p.today");
+today.innerHTML = currentDate();
+
+let searchCityForm = document.querySelector("#search-city");
+searchCityForm.addEventListener("submit", searchCity);
+
+getCurrentPosition();
+
+let currentButton = document.querySelector("#current-button");
+currentButton.addEventListener("click", getCurrentPosition);
 
 let celsiusTemperature = null;
 
