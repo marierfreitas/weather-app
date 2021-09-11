@@ -19,7 +19,7 @@ function currentDate() {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[now.getDay()];
 
@@ -28,8 +28,6 @@ function currentDate() {
 
 let today = document.querySelector("p.today");
 today.innerHTML = currentDate();
-
-// Feature #2
 
 function searchCity(event) {
   event.preventDefault();
@@ -44,8 +42,6 @@ function searchCity(event) {
 let searchCityForm = document.querySelector("#search-city");
 searchCityForm.addEventListener("submit", searchCity);
 
-// Get location and current temperature
-
 function displayWeather(response) {
   let city = response.data.name;
   let weatherDescription = response.data.weather[0].description;
@@ -57,11 +53,17 @@ function displayWeather(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
+  let iconElemment = document.querySelector("#icon");
   currentCity.innerHTML = city;
   currentTemperature.innerHTML = temperature;
   currentWeather.innerHTML = weatherDescription;
   currentHumidity.innerHTML = `${humidity}%`;
   currentWind.innerHTML = `${wind} km/hr`;
+  iconElemment.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElemment.setAttribute("alt", response.data.weather[0].description);
 }
 
 function handlePosition(position) {
