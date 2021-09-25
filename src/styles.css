@@ -65,6 +65,7 @@ h2 {
 
 .icons-forecast {
   text-align: center;
+  vertical-align: middle;
 }
 
 .low-temperature {
@@ -84,8 +85,12 @@ h2 {
 
 #icon {
   width: 22%;
-  margin-right: -15px;
+  margin-right: -10px;
   margin-bottom: 5px;
+}
+
+#forecast {
+  margin-right: -35px;
 }
 
 #celsius-link,

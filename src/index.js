@@ -34,8 +34,58 @@ function searchCity(event) {
   axios.get(url).then(displayWeather);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#");
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = " ";
+
+  forecast.forEach(function days(forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="row"><div class="col-5 days">
+         <div>${formatDay(forecastDay.dt)}</div>
+        </div>
+        
+        <div class="col-3 icons-forecast">
+          <div><img
+            src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png"
+            id="icon-day"
+            alt=""
+            width="35px"/>
+          </div>
+        </div>
+
+        <div class="col-2 low-temperature">
+          <div>${Math.round(forecastDay.temp.min)}</div>
+        </div>
+
+        <div class="col-2 high-temperature">
+         <div>${Math.round(forecastDay.temp.max)}</div>
+        </div></div>`;
+    }
+  });
+
+  forecastHTML = forecastHTML;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
