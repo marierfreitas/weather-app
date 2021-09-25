@@ -16,7 +16,7 @@ h2 {
     rgb(95, 209, 249) 100.2%
   );
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #ffff;
   border-radius: 15px;
   padding: 30px 40px 30px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -26,7 +26,7 @@ h2 {
   position: relative;
   top: -10px;
   font-size: 10px;
-  color: white;
+  color: #ffff;
 }
 
 .fa-wind {
@@ -36,7 +36,7 @@ h2 {
 .today,
 .high-low {
   text-align: center;
-  font-size: 8px;
+  font-size: 9px;
 }
 
 .today {
@@ -52,8 +52,8 @@ h2 {
 .plus-info {
   text-align: center;
   font-size: 10px;
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
+  border-bottom: 1px solid #ffff;
+  border-top: 1px solid #ffff;
   padding: 10px;
   margin-bottom: 40px;
 }
@@ -67,11 +67,12 @@ h2 {
   text-align: center;
 }
 
-.days {
-  text-align: left;
+.low-temperature {
+  text-align: right;
+  opacity: 75%;
 }
 
-.temperature {
+.high-temperature {
   text-align: right;
 }
 
@@ -79,11 +80,6 @@ h2 {
   text-align: center;
   font-size: 10px;
   margin-top: 20px;
-}
-
-.button-icon {
-  font-size: 10px;
-  vertical-align: middle;
 }
 
 #icon {
@@ -94,7 +90,7 @@ h2 {
 
 #celsius-link,
 #fahrenheit-link {
-  color: white;
+  color: #ffff;
   text-decoration: none;
   background-color: transparent;
 }
@@ -117,7 +113,7 @@ h2 {
   padding: 3px 10px;
   text-align: center;
   font-size: 10px;
-  border: 1px solid white;
+  border: 1px solid #ffff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -126,7 +122,7 @@ h2 {
   border: transparent;
   padding: 5px 10px;
   font-size: 10px;
-  color: white;
+  color: #ffff;
   background: linear-gradient(
     109.6deg,
     rgb(9, 9, 121) 11.2%,
@@ -147,7 +143,7 @@ h2 {
   border: transparent;
   padding: 5px 10px;
   font-size: 10px;
-  color: white;
+  color: #ffff;
   background: rgb(144, 6, 161) 53.7%;
   transition: all 200ms ease-in-out;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);

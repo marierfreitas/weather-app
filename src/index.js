@@ -34,6 +34,10 @@ function searchCity(event) {
   axios.get(url).then(displayWeather);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#");
+}
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "7f94287315df4241e13380459d3ec750";
@@ -96,10 +100,6 @@ function displayCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function displayForecast() {
-  let forecastElement = document.querySelector("#");
 }
 
 let today = document.querySelector("p.today");
